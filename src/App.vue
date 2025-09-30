@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <!-- 네비게이션 바 / 헤더 넣고 싶으면 여기에 -->
-    <router-view /> <!-- 라우팅된 화면이 표시되는 자리 -->
+    <router-view />
+    <!-- 라우터에서 현재 경로에 맞는 페이지가 표시됨 -->
   </div>
 </template>
 
 <script setup>
-// 여기서는 별도 import 필요 없음
+// 특별한 로직이 없다면 script는 비워둬도 됨
 </script>
 
-<style>
-/* 프로젝트 전체에 공통으로 적용할 스타일 있으면 여기에 */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+<style scoped>
+/* 전체 레이아웃에 필요한 기본 스타일만 여기서 관리 */
+#app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 </style>

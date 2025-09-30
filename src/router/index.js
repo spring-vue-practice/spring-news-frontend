@@ -1,12 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import BoardPage from '../views/BoardPage.vue'
+
+import RegisterPage from '@/views/RegisterPage.vue'
+import LoginPage from '@/views/LoginPage.vue'
+import WritePage from '@/views/WritePage.vue'
+
+const routes = [
+  { path: '/', redirect: '/register' },
+  { path: '/register', component: RegisterPage },
+  { path: '/login', component: LoginPage },
+  { path: '/write', component: WritePage },
+]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    { path: '/', redirect: '/board' },
-    { path: '/board', name: 'Board', component: BoardPage },
-  ],
+  history: createWebHistory(),
+  routes,
 })
 
 export default router
